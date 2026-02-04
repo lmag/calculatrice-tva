@@ -33,7 +33,7 @@
 
 <?php
 $site = "http://www.calculatrice-tva.com/";
-$mail = $_POST['tmail']; // Déclaration de l'adresse de destination.
+$mail = $_POST['tmail']; // Dï¿½claration de l'adresse de destination.
 function euro($id)
 {
 	if (empty($id))
@@ -49,7 +49,7 @@ $_POST['ht'] = euro($_POST['ht']);
 $_POST['tva'] = euro($_POST['tva']);
 $_POST['ttc'] = euro($_POST['ttc']);
 
-if (!preg_match("#^[a-z0-9._-]+@(hotmail|live|msn).[a-z]{2,4}$#", $mail)) // On filtre les serveurs qui présentent des bogues.
+if (!preg_match("#^[a-z0-9._-]+@(hotmail|live|msn).[a-z]{2,4}$#", $mail)) // On filtre les serveurs qui prï¿½sentent des bogues.
 {
 	$passage_ligne = "\r\n";
 }
@@ -57,7 +57,7 @@ else
 {
 	$passage_ligne = "\n";
 }
-//=====Déclaration des messages au format texte et au format HTML.
+//=====Dï¿½claration des messages au format texte et au format HTML.
 $message_txt = "Conforme&acute;ment &agrave; votre demande, voici les montants que vous avez voulu recevoir par email :
 				Montant HT : ".$_POST['ht'].", Montant TVA : ".$_POST['tva'].", Montant TTC : ".$_POST['ttc']." Taux avec lequel vous avez obtenu ces r&eacute;sultats : ".$_POST['taux']." %";
 $message_html = 
@@ -98,23 +98,23 @@ A bientÃ´t sur <a href="'.$site.'">'.$site.'</a>
 ';
 //==========
 
-//=====Création de la boundary.
+//=====Crï¿½ation de la boundary.
 $boundary = "-----=".md5(rand());
 $boundary_alt = "-----=".md5(rand());
 //==========
  
-//=====Définition du sujet.
+//=====Dï¿½finition du sujet.
 $sujet = "Montants HT - TVA - TTC calcul&eacute;s sur www.calculatrice-tva.com";
 //=========
  
-//=====Création du header de l'e-mail.
+//=====Crï¿½ation du header de l'e-mail.
 $header = "From: \"calculatrice-tva.com\"<ne-pas-rÃ©pondre@calculatrice-tva.com>".$passage_ligne;
 $header.= "Reply-to: \"calculatrice-tva.com\" <no-replay@calculatrice-tva.com>".$passage_ligne;
 $header.= "MIME-Version: 1.0".$passage_ligne;
 $header.= "Content-Type: multipart/mixed;".$passage_ligne." boundary=\"$boundary\"".$passage_ligne;
 //==========
  
-//=====Création du message.
+//=====Crï¿½ation du message.
 $message = $passage_ligne."--".$boundary.$passage_ligne;
 $message.= "Content-Type: multipart/alternative;".$passage_ligne." boundary=\"$boundary_alt\"".$passage_ligne;
 $message.= $passage_ligne."--".$boundary_alt.$passage_ligne;
@@ -149,9 +149,9 @@ mail($mail,$sujet,$message,$header);
 	<img src="img/titre.png" alt="titre" title="Calculatrice TVA" />
 	
 	<span class="bandeau_droite">
-		<a href="http://www.calculatrice.eu/">Calculatrice EU</a> -
-		<a href="http://www.calculatrice-imc.com/">Calculatrice IMC</a> -
-		<a href="http://e-calculatrice.com/calculatrice-de-parts-sociales.html">Calculatrice de parts sociales</a> -
+		<a href="https://www.calculatrice.eu/">Calculatrice EU</a> -
+		<a href="https://www.calculatrice-imc.com/">Calculatrice IMC</a> -
+		<a href="https://e-calculatrice.com/calculatrice-de-parts-sociales.html">Calculatrice de parts sociales</a> -
 		<img src="img/favoris.png" alt="ajouterauxfavoris" class="favoris" id="imagefavori"  name="btn_favoris" onmouseover="document.btn_favoris.src='img/favoris_hover.png'"
 		onmouseout="document.btn_favoris.src='img/favoris.png'" onclick="favoris()"/>
 	</span>
@@ -219,7 +219,7 @@ mail($mail,$sujet,$message,$header);
 			google_ad_height = 80;
 			//-->
 		</script>
-		<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+		<script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
 		</script>
 	</div>
 	
@@ -230,7 +230,7 @@ mail($mail,$sujet,$message,$header);
 			<tr>
 			<td align="right">
 			<!--[if IE]>
-			<iframe src="http://www.facebook.com/plugins/like.php?href=www.calculatrice-tva.com&amp;layout=standard&amp;show_faces=false&amp;width=450&amp;action=like&amp;font=arial&amp;colorscheme=light&amp;height=35" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:200px; height:35px;"
+			<iframe src="https://www.facebook.com/plugins/like.php?href=www.calculatrice-tva.com&amp;layout=standard&amp;show_faces=false&amp;width=450&amp;action=like&amp;font=arial&amp;colorscheme=light&amp;height=35" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:200px; height:35px;"
 			  allowTransparency="true">
 			</iframe>
 			<![endif]-->
@@ -241,7 +241,7 @@ mail($mail,$sujet,$message,$header);
 			
 			</td>
 			<td valign="top" align="right" width="100">
-			<a href="http://twitter.com/share" class="twitter-share-button" id="TwitterShareButton" >Tweet</a>
+			<a href="https://twitter.com/share" class="twitter-share-button" id="TwitterShareButton" >Tweet</a>
 			<script type="text/javascript">
 			var ValidMe=document.getElementById("TwitterShareButton");
 			ValidMe.setAttribute("data-count","horizontal");
@@ -283,7 +283,7 @@ mail($mail,$sujet,$message,$header);
 				</td>
 				<td class="bordure_tableau">
 					<ul>
-						<li><a title="L'Atelier Gourmand Montpellier" href="http://www.lateliergourmand-montpellier.com" target="_blank">Restaurant</a></li>
+						<li><a title="L'Atelier Gourmand Montpellier" href="https://www.lateliergourmand-montpellier.com" target="_blank">Restaurant</a></li>
 						<li>L'hÃ´tellerie</li>
 						<li>Livres</li>
 						<li>Transports de voyageurs</li>
@@ -292,12 +292,11 @@ mail($mail,$sujet,$message,$header);
 				</td>
 				<td class="bordure_tableau">
 					<ul>
-						<li><a title="Vente d'échafaudages" href="http://www.btpdirect.com/categorie/echafaudages" target="_blank">Echafaudage</a></li>
+						<li><a title="Vente d'ï¿½chafaudages" href="https://www.btpdirect.com/categorie/echafaudages" target="_blank">Echafaudage</a></li>
 						<li>Chocolats au lait</li>
 						<li><a title="Menuiserie et fenetres " href="http://www.sonimen.fr" target="_blank">Menuiserie Ã  Nimes</a></li>
 						<li>Ventes Ã  consommer sur place</li>
-						<li><a title="Acheter carrelage haut de gamme" href="http://www.mamaison-online.com/categorie/carrelages/" target="_blank">Carrelage</a></li>
-						<li><a title="Vente de cartons de d?m?nagement" href="http://www.cademenage.fr/boutique/" target="_blank">Carton Montpellier </a></li>
+						<li><a title="Acheter carrelage haut de gamme" href="https://www.mamaison-online.com/categorie/carrelages/" target="_blank">Carrelage</a></li>
 					</ul>
 				</td>
 			</tr>
@@ -333,20 +332,20 @@ mail($mail,$sujet,$message,$header);
 	</div>
 	
 	<div id="info_pied_page">
-	<a href="http://www.ethigestion.fr/nos-metiers/syndic-de-copropriete" target="_blank">Syndic Montpellier</a> - 
-	<a title="école de commerce et management " href="http://www.idelca.fr" target="_blank">&Eacute;cole Idelca Montpellier</a> - 
-	<a title="Louer votre maison en Espagne" href="http://www.villas-espagne.com" target="_blank">Location villa en Espagne</a> - 
-	<a title="Siveco Solutions de GMAO" href="http://www.siveco.com/" target="_blank">Logiciel GMAO</a> - 
-	<a title="Conseiller transport marchandises dangereuses" href="http://www.evarisk.com/prestations/conseiller-securite-adr" target="_blank">Conseiller sÃ©curitÃ© ADR </a> - 
+	<a href="https://www.ethigestion.fr/nos-metiers/syndic-de-copropriete" target="_blank">Syndic Montpellier</a> - 
+	<a title="Ã©cole de commerce et management " href="https://www.idelca.fr" target="_blank">&Eacute;cole Idelca Montpellier</a> - 
+	<a title="Louer votre maison en Espagne" href="https://www.villas-espagne.com" target="_blank">Location villa en Espagne</a> - 
+	<a title="Siveco Solutions de GMAO" href="https://www.siveco.com/" target="_blank">Logiciel GMAO</a> - 
+	<a title="Conseiller transport marchandises dangereuses" href="https://www.evarisk.com/prestations/conseiller-securite-adr" target="_blank">Conseiller sÃ©curitÃ© ADR </a> - 
 	<a title="Accessoires et pi?ces moto, scooter" href="http://www.alliance2roues.com" target="_blank">PiÃ¨ces dÃ©tachÃ©es scooter et moto </a>
 	
 	
 	<p align="center">
-	Design et dÃ©veloppement <a href="http://www.eoxia.com" target="_blank">Eoxia - Montpellier</a>
+	Design et dÃ©veloppement <a href="https://www.eoxia.com" target="_blank">Eoxia - Montpellier</a>
 	</p>
 	
 	<p align="center">
-	<a href="http://validator.w3.org/check?uri=referer"><img
+	<a href="https://validator.w3.org/check?uri=referer"><img
 	src="http://www.w3.org/Icons/valid-xhtml10" alt="Valid XHTML 1.0 Transitional" height="31" width="88" /></a>
 	</p>
 

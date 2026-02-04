@@ -168,11 +168,20 @@ function txtva(id)
 			$('taux').value = "7";
 			$('ht').focus();
 			modiftaux();
-		}else{
-			$('taux').value = "20";
-			$('ht').focus();
-			modiftaux();
+		}
+		else
+		{
+			if (id == "tva10")
+			{
+				$('taux').value = "10";
+				$('ht').focus();
+				modiftaux();
+			}else{
+				$('taux').value = "20";
+				$('ht').focus();
+				modiftaux();
 			}
+		}
 		}
 		
 	}
@@ -208,7 +217,7 @@ function email()
 	}
 	else
 	{
-		alert('Il n\'y a rien à envoyer.');
+		alert('Il n\'y a rien ï¿½ envoyer.');
 	}
 }
 function favoris() 
